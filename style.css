@@ -1,12 +1,4 @@
-/* =========================================
-   GOOGLE FONT
-========================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
-
-/* =========================================
-   RESET & BASE STYLES
-========================================= */
 
 *{
     margin:0;
@@ -40,17 +32,12 @@ img{
     display:block;
 }
 
-/* Reusable Container (Replaces Bootstrap Container) */
 .container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
-
-/* =========================================
-   COLORS
-========================================= */
 
 :root{
     --primary:#0d6efd;
@@ -60,10 +47,6 @@ img{
     --gray:#666666;
     --light:#f8f8f8;
 }
-
-/* =========================================
-   ENVATO BAR
-========================================= */
 
 .envato-bar{
     background:#242424;
@@ -103,19 +86,14 @@ img{
     background:#6fa132;
 }
 
-/* =========================================
-   HEADER & SLANTED NAVBAR
-========================================= */
-
 .main-header{
     position:relative;
     z-index:1000;
 }
 
-/* Blue Topbar */
 .topbar{
     background:#0056ff;
-    padding:12px 0 45px 0; /* Extra space at bottom so navbar doesn't cover text */
+    padding:12px 0 45px 0;
     color:#fff;
     font-size:14px;
     position:relative;
@@ -124,14 +102,14 @@ img{
 .topbar-content{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Keeps logo and topbar info aligned at the top */
+    align-items: flex-start;
 }
 
 .topbar-info{
     display: flex;
     align-items: center;
     gap: 20px;
-    z-index: 2; /* Ensures text stays above background elements */
+    z-index: 2;
 }
 
 .topbar p{
@@ -153,7 +131,6 @@ img{
     margin-top: -5px;
 }
 
-/* White Slanted Navbar */
 .navbar{
     background:#ffffff;
     padding:18px 0;
@@ -219,10 +196,6 @@ img{
     width:100%;
 }
 
-/* =========================================
-   SEARCH
-========================================= */
-
 .search{
     width:45px;
     height:45px;
@@ -242,10 +215,6 @@ img{
     border-color:var(--primary);
 }
 
-/* =========================================
-   GET STARTED BUTTON
-========================================= */
-
 .start-btn{
     background:var(--primary);
     border:none;
@@ -262,10 +231,6 @@ img{
     background:#002fbe;
     box-shadow:0 10px 25px rgba(13,110,253,.35);
 }
-
-/* =========================================
-   STICKY NAVBAR
-========================================= */
 
 .sticky{
     position:fixed;
@@ -287,10 +252,6 @@ img{
     }
 }
 
-/* =========================================
-   HERO SECTION
-========================================= */
-
 .hero{
     position:relative;
     min-height:100vh;
@@ -300,7 +261,6 @@ img{
     overflow:hidden;
 }
 
-/* Dark Overlay */
 .hero .overlay{
     position:absolute;
     inset:0;
@@ -308,7 +268,6 @@ img{
     z-index:1;
 }
 
-/* Hero Content */
 .hero .container{
     position:relative;
     z-index:2;
@@ -347,7 +306,6 @@ img{
     animation:fadeUp 1.4s ease;
 }
 
-/* Hero Button */
 .hero-btn{
     display:inline-block;
     background:#0d6efd;
@@ -365,10 +323,6 @@ img{
     transform:translateY(-3px);
     box-shadow:0 10px 25px rgba(13,110,253,.35);
 }
-
-/* =========================================
-   LEFT SLIDER DOTS
-========================================= */
 
 .slider-dots{
     position:absolute;
@@ -398,10 +352,6 @@ img{
 .slider-dots span:hover{
     background:#fff;
 }
-
-/* =========================================
-   RIGHT SOCIAL BAR
-========================================= */
 
 .right-sidebar{
     position:absolute;
@@ -449,10 +399,6 @@ img{
     letter-spacing:2px;
 }
 
-/* =========================================
-   HERO SHAPES
-========================================= */
-
 .hero::before{
     content:"";
     position:absolute;
@@ -478,10 +424,6 @@ img{
     z-index:1;
 }
 
-/* =========================================
-   KEYFRAME ANIMATIONS
-========================================= */
-
 @keyframes fadeUp{
     from{
         opacity:0;
@@ -504,10 +446,6 @@ img{
     }
 }
 
-/* ==========================================
-   SERVICES SECTION
-========================================== */
-
 .services{
     position:relative;
     background:#fff;
@@ -516,7 +454,6 @@ img{
     z-index:10;
 }
 
-/* Custom CSS Grid to Replace Bootstrap Grid */
 .services-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -606,10 +543,6 @@ img{
     color:#081A51;
 }
 
-/* ==========================================
-   SCROLLBAR
-========================================== */
-
 ::-webkit-scrollbar{
     width:10px;
 }
@@ -626,10 +559,6 @@ img{
 ::-webkit-scrollbar-thumb:hover{
     background:#002fbe;
 }
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
 
 @media(max-width:1200px){
     .navbar{
@@ -746,10 +675,6 @@ img{
     }
 }
 
-/* ==========================================
-   UTILITIES
-========================================== */
-
 .section-title{
     font-size:48px;
     font-weight:800;
@@ -772,10 +697,6 @@ img{
     margin-bottom:100px;
 }
 
-/* =========================================
-   CUSTOM ABOUT SECTION
-========================================= */
-
 .about-section {
     background-color: #f8fafc;
     padding: 100px 0;
@@ -784,12 +705,11 @@ img{
 
 .about-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Ensures equal 50/50 split */
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
 }
 
-/* --- Left Image Container --- */
 .about-media {
     position: relative;
     width: 100%;
@@ -810,7 +730,6 @@ img{
     display: block;
 }
 
-/* Floating Experience Badge */
 .about-media .experience-badge {
     position: absolute;
     bottom: -20px;
@@ -839,7 +758,6 @@ img{
     max-width: 100px;
 }
 
-/* --- Right Content Styling --- */
 .about-content {
     width: 100%;
 }
@@ -873,7 +791,6 @@ img{
     margin-bottom: 24px;
 }
 
-/* Features List */
 .about-features {
     display: flex;
     flex-direction: column;
@@ -895,7 +812,6 @@ img{
     font-size: 18px;
 }
 
-/* Highlight Box */
 .highlight-card {
     background: #ffffff;
     border-left: 4px solid #0d6efd;
@@ -928,7 +844,6 @@ img{
     margin: 0;
 }
 
-/* CTA Area */
 .about-cta {
     display: flex;
     align-items: center;
@@ -987,7 +902,6 @@ img{
     color: #081A51;
 }
 
-/* Responsive Styles */
 @media (max-width: 992px) {
     .about-container {
         grid-template-columns: 1fr;
