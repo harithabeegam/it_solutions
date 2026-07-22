@@ -1,4 +1,12 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================================
+   RESET & BASE STYLES
+========================================= */
 
 *{
     margin:0;
@@ -32,12 +40,17 @@ img{
     display:block;
 }
 
+/* Reusable Container (Replaces Bootstrap Container) */
 .container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
+/* =========================================
+   COLORS
+========================================= */
 
 :root{
     --primary:#0d6efd;
@@ -47,6 +60,10 @@ img{
     --gray:#666666;
     --light:#f8f8f8;
 }
+
+/* =========================================
+   ENVATO BAR
+========================================= */
 
 .envato-bar{
     background:#242424;
@@ -86,14 +103,19 @@ img{
     background:#6fa132;
 }
 
+/* =========================================
+   HEADER & SLANTED NAVBAR
+========================================= */
+
 .main-header{
     position:relative;
     z-index:1000;
 }
 
+/* Blue Topbar */
 .topbar{
     background:#0056ff;
-    padding:12px 0 45px 0;
+    padding:12px 0 45px 0; /* Extra space at bottom so navbar doesn't cover text */
     color:#fff;
     font-size:14px;
     position:relative;
@@ -102,14 +124,14 @@ img{
 .topbar-content{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; /* Keeps logo and topbar info aligned at the top */
 }
 
 .topbar-info{
     display: flex;
     align-items: center;
     gap: 20px;
-    z-index: 2;
+    z-index: 2; /* Ensures text stays above background elements */
 }
 
 .topbar p{
@@ -131,6 +153,7 @@ img{
     margin-top: -5px;
 }
 
+/* White Slanted Navbar */
 .navbar{
     background:#ffffff;
     padding:18px 0;
@@ -196,6 +219,10 @@ img{
     width:100%;
 }
 
+/* =========================================
+   SEARCH
+========================================= */
+
 .search{
     width:45px;
     height:45px;
@@ -215,6 +242,10 @@ img{
     border-color:var(--primary);
 }
 
+/* =========================================
+   GET STARTED BUTTON
+========================================= */
+
 .start-btn{
     background:var(--primary);
     border:none;
@@ -231,6 +262,10 @@ img{
     background:#002fbe;
     box-shadow:0 10px 25px rgba(13,110,253,.35);
 }
+
+/* =========================================
+   STICKY NAVBAR
+========================================= */
 
 .sticky{
     position:fixed;
@@ -252,6 +287,10 @@ img{
     }
 }
 
+/* =========================================
+   HERO SECTION
+========================================= */
+
 .hero{
     position:relative;
     min-height:100vh;
@@ -261,6 +300,7 @@ img{
     overflow:hidden;
 }
 
+/* Dark Overlay */
 .hero .overlay{
     position:absolute;
     inset:0;
@@ -268,6 +308,7 @@ img{
     z-index:1;
 }
 
+/* Hero Content */
 .hero .container{
     position:relative;
     z-index:2;
@@ -306,6 +347,7 @@ img{
     animation:fadeUp 1.4s ease;
 }
 
+/* Hero Button */
 .hero-btn{
     display:inline-block;
     background:#0d6efd;
@@ -323,6 +365,10 @@ img{
     transform:translateY(-3px);
     box-shadow:0 10px 25px rgba(13,110,253,.35);
 }
+
+/* =========================================
+   LEFT SLIDER DOTS
+========================================= */
 
 .slider-dots{
     position:absolute;
@@ -352,6 +398,10 @@ img{
 .slider-dots span:hover{
     background:#fff;
 }
+
+/* =========================================
+   RIGHT SOCIAL BAR
+========================================= */
 
 .right-sidebar{
     position:absolute;
@@ -399,6 +449,10 @@ img{
     letter-spacing:2px;
 }
 
+/* =========================================
+   HERO SHAPES
+========================================= */
+
 .hero::before{
     content:"";
     position:absolute;
@@ -424,6 +478,10 @@ img{
     z-index:1;
 }
 
+/* =========================================
+   KEYFRAME ANIMATIONS
+========================================= */
+
 @keyframes fadeUp{
     from{
         opacity:0;
@@ -446,6 +504,10 @@ img{
     }
 }
 
+/* ==========================================
+   SERVICES SECTION
+========================================== */
+
 .services{
     position:relative;
     background:#fff;
@@ -454,6 +516,7 @@ img{
     z-index:10;
 }
 
+/* Custom CSS Grid to Replace Bootstrap Grid */
 .services-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -543,6 +606,10 @@ img{
     color:#081A51;
 }
 
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
 ::-webkit-scrollbar{
     width:10px;
 }
@@ -559,6 +626,10 @@ img{
 ::-webkit-scrollbar-thumb:hover{
     background:#002fbe;
 }
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
 @media(max-width:1200px){
     .navbar{
@@ -675,6 +746,10 @@ img{
     }
 }
 
+/* ==========================================
+   UTILITIES
+========================================== */
+
 .section-title{
     font-size:48px;
     font-weight:800;
@@ -697,6 +772,10 @@ img{
     margin-bottom:100px;
 }
 
+/* =========================================
+   CUSTOM ABOUT SECTION
+========================================= */
+
 .about-section {
     background-color: #f8fafc;
     padding: 100px 0;
@@ -705,11 +784,12 @@ img{
 
 .about-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Ensures equal 50/50 split */
     gap: 60px;
     align-items: center;
 }
 
+/* --- Left Image Container --- */
 .about-media {
     position: relative;
     width: 100%;
@@ -730,6 +810,7 @@ img{
     display: block;
 }
 
+/* Floating Experience Badge */
 .about-media .experience-badge {
     position: absolute;
     bottom: -20px;
@@ -758,6 +839,7 @@ img{
     max-width: 100px;
 }
 
+/* --- Right Content Styling --- */
 .about-content {
     width: 100%;
 }
@@ -791,6 +873,7 @@ img{
     margin-bottom: 24px;
 }
 
+/* Features List */
 .about-features {
     display: flex;
     flex-direction: column;
@@ -812,6 +895,7 @@ img{
     font-size: 18px;
 }
 
+/* Highlight Box */
 .highlight-card {
     background: #ffffff;
     border-left: 4px solid #0d6efd;
@@ -844,6 +928,7 @@ img{
     margin: 0;
 }
 
+/* CTA Area */
 .about-cta {
     display: flex;
     align-items: center;
@@ -902,6 +987,7 @@ img{
     color: #081A51;
 }
 
+/* Responsive Styles */
 @media (max-width: 992px) {
     .about-container {
         grid-template-columns: 1fr;
@@ -922,5 +1008,310 @@ img{
     .about-cta {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+.site-footer {
+    background-color: #03081e;
+    color: #ffffff;
+    padding-top: 50px;
+    position: relative;
+}
+
+.footer-newsletter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.footer-newsletter h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 12px;
+}
+
+.newsletter-form input {
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    width: 280px;
+    font-size: 14px;
+}
+
+.newsletter-form button {
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #002fbe;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.footer-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    background: #0d6efd;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.card-header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #0d6efd;
+}
+
+.footer-logo {
+    height: 40px;
+}
+
+.card-header h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.card-body {
+    padding: 30px;
+    color: #111111;
+}
+
+.card-body h4 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.card-body p {
+    color: #888888;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 25px;
+}
+
+.card-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.card-socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #0d6efd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0d6efd;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.card-socials a.active,
+.card-socials a:hover {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links a {
+    color: #a0a5b8;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0d6efd;
+}
+
+.footer-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.post-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.post-info a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    display: block;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.post-info a:hover {
+    color: #0d6efd;
+}
+
+.post-info span {
+    color: #0d6efd;
+    font-size: 12px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #0d6efd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.contact-list p {
+    color: #a0a5b8;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.footer-bottom p {
+    color: #a0a5b8;
+    font-size: 14px;
+    margin: 0;
+}
+
+.bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-links a {
+    color: #a0a5b8;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.bottom-links a:hover {
+    color: #0d6efd;
+}
+
+.scroll-top {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+    transition: 0.3s;
+}
+
+.scroll-top:hover {
+    background: #002fbe;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-newsletter {
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .scroll-top {
+        position: relative;
+        top: 0;
+        margin-top: 10px;
     }
 }
